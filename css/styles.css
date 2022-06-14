@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #808080;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+#header {
+  background: #927c00 radial-gradient(#ffd700, #927c00) fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#logo-and-nav {
+  align-items: center;
+  background-color: #000;
+  display: grid;
+  flex-grow: 0;
+  grid-gap: max(4vw, 32px);
+  grid-template-columns: minmax(214px, 33%) 1fr;
+  padding: max(1vw, 8px);
+  position: fixed;
+  width: 100%;
+}
+
+#header-img {
+  filter: invert(100%);
+  width: 100%;
+}
+
+#nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: max(1vw, 8px);
+  justify-content: flex-end;
+  text-align: right;
+}
+
+#nav-bar > a {
+  color: #fff;
+}
+
+#nav-bar > a:hover {
+  color: #c8c8c8;
+}
+
+#title-and-subtitle {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-size: 32px;
+  justify-content: center;
+}
+
+#title-and-subtitle > * {
+  margin: 0;
+}
+
+@media only screen and (min-width: 576px) {
+  main {
+    grid-template-areas:
+      "features how-it-works"
+      "contact contact";
+    grid-template-columns: 1fr min-content;
+  }
+
+  #features {
+    grid-area: features;
+  }
+
+  #how-it-works {
+    grid-area: how-it-works;
+  }
+
+  #contact {
+    grid-area: contact;
+  }
+}
+
+main {
+  display: grid;
+  grid-gap: max(2vw, 16px);
+  margin: max(2vw, 16px);
+}
+
+main > section {
+  background-color: #fff;
+  border: 3px solid #927c00;
+  border-radius: max(1vw, 8px);
+  padding: max(1vw, 8px);
+}
+
+dt {
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+dd:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+#email,
+#submit {
+  font-size: 1em;
+  padding: 0.5em;
+}
+
+#email {
+  border: 1px solid #4a3f00;
+}
+
+#submit {
+  background-color: #3d7f00;
+  border-style: none;
+  color: #f2ffe5;
+}
+
+#submit:hover {
+  background-color: #336a00;
+}
