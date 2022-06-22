@@ -19,10 +19,16 @@ const adjustNotFixedElement = (fixedElement, notFixedElement) => {
  * @param {HTMLElement} htmlElement - HTML element to change
  */
 const makeElementObround = (htmlElement) => {
-  const HALF_HEIGHT = ~~(0.5 * htmlElement.offsetHeight) + 'px';
-  htmlElement.style.borderRadius = HALF_HEIGHT;
-  htmlElement.style.paddingRight = HALF_HEIGHT;
-  htmlElement.style.paddingLeft = HALF_HEIGHT;
+  /*
+   * Even though the `halfHeight` variable never gets reassigned, its name
+   * doesn't use constant case because its value depends on that of
+   * `htmlElement`. Thus, it's not truly "constant."
+   */
+  const halfHeight = ~~(0.5 * htmlElement.offsetHeight) + 'px';
+
+  htmlElement.style.borderRadius = halfHeight;
+  htmlElement.style.paddingRight = halfHeight;
+  htmlElement.style.paddingLeft = halfHeight;
 };
 
 const projectName = 'product-landing-page';
