@@ -24,7 +24,7 @@ const makeElementObround = (htmlElement) => {
    * doesn't use constant case because its value depends on that of
    * `htmlElement`. Thus, it's not truly "constant."
    */
-  const halfHeight = ~~(0.5 * htmlElement.offsetHeight) + 'px';
+  const halfHeight = ~~(.5 * htmlElement.offsetHeight) + 'px';
 
   htmlElement.style.borderRadius = halfHeight;
   htmlElement.style.paddingRight = halfHeight;

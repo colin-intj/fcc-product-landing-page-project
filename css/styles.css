@@ -111,7 +111,7 @@ dd:not(:last-child) {
 #email,
 #submit {
   font-size: 1em;
-  padding: 0.5em;
+  padding: .5em;
 }
 
 #email {
