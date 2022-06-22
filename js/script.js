@@ -27,13 +27,13 @@ const makeElementObround = (htmlElement) => {
 
 const projectName = 'product-landing-page';
 
-const LOGO_AND_NAV = document.getElementById('logo-and-nav');
-const TITLE_AND_SUBTITLE = document.getElementById('title-and-subtitle');
+const logoAndNav = document.getElementById('logo-and-nav');
+const titleAndSubtitle = document.getElementById('title-and-subtitle');
 
-adjustNotFixedElement(LOGO_AND_NAV, TITLE_AND_SUBTITLE);
+adjustNotFixedElement(logoAndNav, titleAndSubtitle);
 
 window.addEventListener('resize', () =>
-  adjustNotFixedElement(LOGO_AND_NAV, TITLE_AND_SUBTITLE));
+  adjustNotFixedElement(logoAndNav, titleAndSubtitle));
 
 makeElementObround(document.getElementById('email'));
 makeElementObround(document.getElementById('submit'));
